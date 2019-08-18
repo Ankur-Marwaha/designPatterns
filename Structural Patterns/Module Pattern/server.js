@@ -2,13 +2,15 @@ var express = require("express");
 var app = express();
 var PORT = 3000;
 
-app.get("/", function(req, res) {
-  res.status(200).send("asdfs world");
-});
+// app.get("/", function(req, res) {
+//   res.status(200).send("asdfs world");
+// });
 
-app.get("/asdf", function(req, res) {
+app.use("/", express.static(__dirname + "/"));
+
+app.get("/", function(req, res) {
   //res.status(200).send("1/index.html");
-  res.status(200).sendFile("1/index.html", { root: __dirname });
+  res.status(200).sendFile("index.html", { root: __dirname });
 });
 
 app.listen(PORT, function() {
