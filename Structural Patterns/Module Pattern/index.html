@@ -1,8 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js"></script>
-    <script type="text/javascript" src="/js/index.js"></script>
+    <script
+      data-main="js/config"
+      src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js"
+    ></script>
+
+    <!-- In this case, config.js may or may not be loaded before index.js -->
+    <!-- <script type="text/javascript" src="/js/index.js"></script> -->
+
+    <!-- To make sure config.js file is loaded before index.js -->
+    <script>
+      // require(["config", "index"], function(c, i) {
+      //   alert("config is loaded");
+      // });
+      require(["config"], function(c) {
+        require(["index"], function(i) {
+          alert("config is loaded");
+        });
+      });
+    </script>
   </head>
 
   <body>
