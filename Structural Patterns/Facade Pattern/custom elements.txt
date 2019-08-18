@@ -3,6 +3,9 @@ simply creating reusable components
 like in 
 
 react
+
 angular
-web component v1
+
+web component v1 - https://developers.google.com/web/fundamentals/web-components/examples/howto-checkbox
+
 polymer  etc
