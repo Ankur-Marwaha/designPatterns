@@ -1,6 +1,7 @@
 require(["helper/firstModule", "jquery"], function(firstModule, jquery) {
   alert("index.js");
-  alert(firstModule + "asdf");
+  //alert(firstModule);
+  firstModule.firstMethod();
   if (jquery) {
     alert("jquery is defined");
   }

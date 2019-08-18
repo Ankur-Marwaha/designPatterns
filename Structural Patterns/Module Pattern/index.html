@@ -5,6 +5,7 @@
       data-main="js/config"
       src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js"
     ></script>
+    <!-- <link rel="stylesheet" type="text/css" href="css/main.css" /> -->
 
     <!-- In this case, config.js may or may not be loaded before index.js -->
     <!-- <script type="text/javascript" src="/js/index.js"></script> -->
@@ -15,7 +16,7 @@
       //   alert("config is loaded");
       // });
       require(["config"], function(c) {
-        require(["index"], function(i) {
+        require(["index", "css!main.css"], function(i) {
           alert("config is loaded");
         });
       });
