@@ -16,7 +16,8 @@
       //   alert("config is loaded");
       // });
       require(["config"], function(c) {
-        require(["index", "css!main.css"], function(i) {
+        require(["index"], function(i) {
+          alert(i);
           alert("config is loaded");
         });
       });
